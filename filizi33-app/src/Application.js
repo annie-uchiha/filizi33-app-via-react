@@ -1,5 +1,7 @@
-import Landing from "..src/Landing/landing";
-import Login from "..src/Login/login";
+import Header from "./header";
+import Main from "./main";
+import Landing from "./Landing/landing";
+import Login from "./Login/login";
 
 function Application() {
   const isLoggedIn = true;
