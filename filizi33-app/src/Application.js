@@ -1,14 +1,9 @@
-import Landing from "./landing";
-import Login from "./login";
+import Landing from "..src/Landing/landing";
+import Login from "..src/Login/login";
 
 function Application() {
-  const isLoggedIn = false;
-
-  if (isLoggedIn) {
-    return <Landing />;
-  } else {
-    return <Login />;
-  }
+  const isLoggedIn = true;
+  return <div>{!isLoggedIn ? <Login /> : <landing />}</div>;
 }
 
 export default Application;
