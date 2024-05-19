@@ -1,6 +1,7 @@
-import logo from './logo.svg';
-import './App.css';
-
+import logo from "./logo.svg";
+import "./App.css";
+import Landing from "./Landing/landing";
+import Login from "./Login/login";
 
 function App() {
   return (

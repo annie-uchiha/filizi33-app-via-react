@@ -1,5 +1,3 @@
-import Header from "./header";
-import Main from "./main";
 import Landing from "./Landing/landing";
 import Login from "./Login/login";
 
