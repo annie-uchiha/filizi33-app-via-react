@@ -14,7 +14,7 @@ function Login() {
 
   return (
     <div>
-      <Form noValidate validated={validated} onSubmit={handleSubmit}>
+      <Form onSubmit={handleSubmit}>
         <Row className="mb-3">
           <Form.Group as={Col} md="4">
             <Form.Label>e-mail</Form.Label>
