@@ -25,3 +25,8 @@ function App() {
 }
 
 export default App;
+
+/* Introduction to React.js
+- Create React application with header, footer and main js files
+- Add style
+- Add buttons with simple functionality */
