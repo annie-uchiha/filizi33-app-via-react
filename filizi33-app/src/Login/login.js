@@ -1,5 +1,5 @@
 import Button from "react-bootstrap/Button";
-import Col from "react-bootstrap/Col"; 
+import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 
@@ -17,7 +17,6 @@ function Login() {
       <Form onSubmit={handleSubmit}>
         <Row className="mb-3">
           <Form.Group as={Col} md="4">
-            <Form.Label>e-mail</Form.Label>
             <Form.Control
               required
               type="text"
@@ -26,7 +25,6 @@ function Login() {
             />
           </Form.Group>
           <Form.Group as={Col} md="4">
-            <Form.Label>password</Form.Label>
             <Form.Control
               required
               type="password"
