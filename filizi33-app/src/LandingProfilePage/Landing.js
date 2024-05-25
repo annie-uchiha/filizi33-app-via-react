@@ -1,10 +1,5 @@
 function Landing() {
-  return (
-    <div>
-      <Header />
-      <Main />
-    </div>
-  );
+  return <div></div>;
 }
 
 export default Landing;

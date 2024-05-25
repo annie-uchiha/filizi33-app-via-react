@@ -3,13 +3,10 @@ import Login from "./Login/Login";
 
 function Application() {
   const isLoggedIn = true;
-  return <div>{!isLoggedIn ? <Login /> : <landing />}</div>;
+  return <div>{!isLoggedIn ? <Login /> : <Landing />}</div>;
 }
 
 export default Application;
-
-
-export default App;
 
 /* Introduction to React.js
 - Create React application with header, footer and main js files

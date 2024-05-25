@@ -2,6 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
+import Header from "./Header and Footer/Header";
+import Footer from "./Header and Footer/Footer";
 import Login from "./Login/Login";
 import Landing from "./LandingProfilePage/Landing";
 
