@@ -17,7 +17,7 @@ function Login() {
     <div className="login-form">
       <Form>
         <Form.Group as={Row} className="mb-3" controlId="formHorizontalEmail">
-          <Col sm={10}>
+          <Col md={100}>
             <Form.Control type="email" placeholder="Email" />
           </Col>
         </Form.Group>
@@ -27,7 +27,7 @@ function Login() {
           className="mb-3"
           controlId="formHorizontalPassword"
         >
-          <Col sm={10}>
+          <Col md={100}>
             <Form.Control type="password" placeholder="Password" />
           </Col>
         </Form.Group>
