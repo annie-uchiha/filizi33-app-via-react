@@ -36,6 +36,12 @@ function Login() {
             <Button type="submit">Sign in</Button>
           </Col>
         </Form.Group>
+        <Form.Group as={Row} className="mb-3">
+          <Col sm={{ span: 10, offset: 2 }}>
+            <a href="/forgot-password">Forgot password?</a>{" "}
+            {/* Added Forgot password link */}
+          </Col>
+        </Form.Group>
       </Form>
     </div>
   );
