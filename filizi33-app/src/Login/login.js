@@ -2,6 +2,7 @@ import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
+import "./Login.scss";
 
 function Login() {
   const handleSubmit = (event) => {
@@ -13,27 +14,28 @@ function Login() {
   };
 
   return (
-    <div>
-      <Form onSubmit={handleSubmit}>
-        <Row className="mb-3">
-          <Form.Group as={Col} md="4">
-            <Form.Control
-              required
-              type="text"
-              placeholder="e-mail"
-              name="e-mail"
-            />
-          </Form.Group>
-          <Form.Group as={Col} md="4">
-            <Form.Control
-              required
-              type="password"
-              placeholder="password"
-              name="password"
-            />
-          </Form.Group>
-        </Row>
-        <Button type="submit">Login</Button>
+    <div className="login-form">
+      <Form>
+        <Form.Group as={Row} className="mb-3" controlId="formHorizontalEmail">
+          <Col sm={10}>
+            <Form.Control type="email" placeholder="Email" />
+          </Col>
+        </Form.Group>
+
+        <Form.Group
+          as={Row}
+          className="mb-3"
+          controlId="formHorizontalPassword"
+        >
+          <Col sm={10}>
+            <Form.Control type="password" placeholder="Password" />
+          </Col>
+        </Form.Group>
+        <Form.Group as={Row} className="mb-3">
+          <Col sm={{ span: 10, offset: 2 }}>
+            <Button type="submit">Sign in</Button>
+          </Col>
+        </Form.Group>
       </Form>
     </div>
   );
