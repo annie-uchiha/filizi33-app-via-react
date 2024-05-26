@@ -7,7 +7,7 @@ function Footer() {
     <footer className="footer-flex">
       <img src={logo} className="footer-img" alt="Logo" />
       <div className="footer-text">
-        <a href="https://www.filziz33.com" className="footer-link">
+        <a href="https://www.filizi33.com" className="footer-link">
           Filizi 33
         </a>
         <p>filizi33@yahoo.com</p>
