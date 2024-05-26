@@ -4,12 +4,12 @@ import "./Footer.scss";
 
 function Footer() {
   return (
-    <div className="footer">
+    <footer className="footer-flex">
       <img src={logo} className="footer-img" alt="Logo" />
       <a href="https://www.filziz33.com" className="footer-link">
         Filizi 33
       </a>
-    </div>
+    </footer>
   );
 }
 

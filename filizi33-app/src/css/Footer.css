@@ -1,7 +1,16 @@
+.footer-flex {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
 .footer-link {
   font-family: "Poetsen One", sans-serif;
   font-weight: 400;
   font-size: 1.5rem;
+  text-decoration: none;
+  color: black;
+  margin-left: 20px;
 }
 
 .footer-img {
