@@ -4,10 +4,10 @@ import "./Header.scss";
 
 function Header() {
   return (
-    <div className="header">
+    <header className="header-flex">
       <img src={logo} className="header-img" alt="Logo" />
       <h1 className="header-title">Filizi 33</h1>
-    </div>
+    </header>
   );
 }
 
