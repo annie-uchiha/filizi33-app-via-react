@@ -68,6 +68,10 @@ function Landing() {
     },
   ];
 
+  const handleCourseClick = (courseId) => {
+    navigate(`/courses/${courseId}`);
+  };
+
   return (
     <div className="landing-container">
       <div className="header">
@@ -103,7 +107,10 @@ function Landing() {
                 <Card.Body>
                   <Card.Title>{course.title}</Card.Title>
                   <Card.Text>{course.description}</Card.Text>
-                  <Button variant="primary" href={`/courses/${course.id}`}>
+                  <Button
+                    variant="primary"
+                    onClick={() => handleCourseClick(course.id)}
+                  >
                     Go to Course
                   </Button>
                 </Card.Body>
