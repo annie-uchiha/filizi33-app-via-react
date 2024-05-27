@@ -1,48 +1,29 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   BrowserRouter as Router,
   Route,
   Routes,
   Navigate,
 } from "react-router-dom";
+import { useAuth } from "./AuthContext";
 import Landing from "./LandingProfilePage/Landing";
 import Login from "./Login/Login";
 
 function Application() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [userEmail, setUserEmail] = useState("");
-
-  const handleLogin = (email) => {
-    setIsLoggedIn(true);
-    setUserEmail(email);
-  };
+  const { isLoggedIn } = useAuth();
 
   return (
-    <Router>
-      <Routes>
-        <Route
-          path="/login"
-          element={
-            !isLoggedIn ? (
-              <Login onLogin={handleLogin} />
-            ) : (
-              <Navigate to="/landing" />
-            )
-          }
-        />
-        <Route
-          path="/landing"
-          element={
-            isLoggedIn ? (
-              <Landing userEmail={userEmail} />
-            ) : (
-              <Navigate to="/login" />
-            )
-          }
-        />
-        <Route path="/" element={<Navigate to="/login" />} />
-      </Routes>
-    </Router>
+    <Routes>
+      <Route
+        path="/login"
+        element={!isLoggedIn ? <Login /> : <Navigate to="/landing" />}
+      />
+      <Route
+        path="/landing"
+        element={isLoggedIn ? <Landing /> : <Navigate to="/login" />}
+      />
+      <Route path="/" element={<Navigate to="/login" />} />
+    </Routes>
   );
 }
 

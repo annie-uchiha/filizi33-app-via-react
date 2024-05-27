@@ -5,13 +5,15 @@ import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import { users } from "../users";
+import { useAuth } from "../AuthContext";
 import "./Login.scss";
 
-function Login({ onLogin }) {
+function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const navigate = useNavigate();
+  const { login } = useAuth();
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -19,7 +21,7 @@ function Login({ onLogin }) {
       (u) => u.email === email && u.password === password
     );
     if (user) {
-      onLogin(email);
+      login(email);
       navigate("/landing");
     } else {
       setError("Invalid email or password");
@@ -70,7 +72,7 @@ function Login({ onLogin }) {
         )}
         <Form.Group as={Row} className="mb-3">
           <Col sm={{ span: 10, offset: 2 }}>
-            <a href="/forgot-password">Forgot password?</a>{" "}
+            <a href="/forgot-password">Forgot password?</a>
           </Col>
         </Form.Group>
       </Form>
