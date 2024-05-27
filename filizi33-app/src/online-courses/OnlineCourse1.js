@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 function OnlineCourse1() {
   return (
     <div>
-      <h2>Course Name</h2>
+      <h2>Italian and Northern Renaissance</h2>
       <p>
         Course Information Lorem ipsum dolor sit amet, consectetur adipiscing
         elit. Nullam euismod eros id orci lacinia, a condimentum dolor rutrum.

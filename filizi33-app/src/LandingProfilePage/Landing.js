@@ -32,37 +32,37 @@ function Landing() {
   const courses = [
     {
       id: 1,
-      title: "Course 1",
+      title: "Italian and Northern Renaissance",
       description: "Description for Course 1",
       imgSrc: "https://via.placeholder.com/150?text=Course+1",
     },
     {
       id: 2,
-      title: "Course 2",
+      title: "Hieronymus Bosch",
       description: "Description for Course 2",
       imgSrc: "https://via.placeholder.com/150?text=Course+2",
     },
     {
       id: 3,
-      title: "Course 3",
+      title: "Pieter Bruegel the Elder",
       description: "Description for Course 3",
       imgSrc: "https://via.placeholder.com/150?text=Course+3",
     },
     {
       id: 4,
-      title: "Course 4",
+      title: "Dante Alighieri. The Path to Happiness",
       description: "Description for Course 4",
       imgSrc: "https://via.placeholder.com/150?text=Course+4",
     },
     {
       id: 5,
-      title: "Course 5",
+      title: "Who killed Romeo and Juliet?",
       description: "Description for Course 5",
       imgSrc: "https://via.placeholder.com/150?text=Course+5",
     },
     {
       id: 6,
-      title: "Course 6",
+      title: "Michelangelo. The Medici Chapel",
       description: "Description for Course 6",
       imgSrc: "https://via.placeholder.com/150?text=Course+6",
     },
