@@ -26,7 +26,6 @@ function Application() {
         path="/landing"
         element={userEmail ? <Landing /> : <Navigate to="/login" />}
       />
-      {/* Add routes for online courses */}
       <Route
         path="/courses/:id"
         element={({ id }) => {
