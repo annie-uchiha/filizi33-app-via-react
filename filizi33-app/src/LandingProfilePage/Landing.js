@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../AuthContext";
 import { users } from "../users";
 import Card from "react-bootstrap/Card";
@@ -95,7 +95,7 @@ function Landing() {
       <div>
         <h2>Your Courses</h2>
         <div className="course-list">
-          {user.courses.map((courseId) => {
+          {user.courses.map((courseId, index) => {
             const course = courses.find((c) => c.id === courseId);
             return (
               <Card key={course.id} style={{ width: "18rem", margin: "10px" }}>
@@ -103,9 +103,13 @@ function Landing() {
                 <Card.Body>
                   <Card.Title>{course.title}</Card.Title>
                   <Card.Text>{course.description}</Card.Text>
-                  <Button variant="primary" href={`/courses/${course.id}`}>
+                  {/* Use Link instead of Button with href */}
+                  <Link
+                    to={`/courses/${index + 1}`}
+                    className="btn btn-primary"
+                  >
                     Go to Course
-                  </Button>
+                  </Link>
                 </Card.Body>
               </Card>
             );
