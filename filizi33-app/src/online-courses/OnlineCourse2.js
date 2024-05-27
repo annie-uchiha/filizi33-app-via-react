@@ -1,5 +1,6 @@
 import React from "react";
 import Accordion from "react-bootstrap/Accordion";
+import { Link } from "react-router-dom";
 
 function OnlineCourse1() {
   return (
@@ -32,6 +33,7 @@ function OnlineCourse1() {
           </Accordion.Body>
         </Accordion.Item>
       </Accordion>
+      <Link to="/landing">Go back</Link>
     </div>
   );
 }
