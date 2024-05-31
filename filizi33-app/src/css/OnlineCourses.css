@@ -1,0 +1,28 @@
+.online-course-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 50px;
+  margin-bottom: 200px;
+}
+
+.accordion-wrapper {
+  width: 100%;
+  max-width: 800px;
+  margin-bottom: 20px;
+}
+
+.video-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.goBack {
+  text-decoration: none;
+  border: 1px solid grey;
+  border-radius: 20px;
+  padding: 10px;
+  margin-top: 20px;
+}

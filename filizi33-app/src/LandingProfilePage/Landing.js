@@ -11,6 +11,7 @@ function Landing() {
   const { userEmail, logout } = useAuth();
   const user = users.find((u) => u.email === userEmail);
   const [imageUrl, setImageUrl] = useState(user.imageUrl);
+  const userName = user.userName;
 
   const handleImageUpload = (event) => {
     const file = event.target.files[0];
@@ -33,37 +34,37 @@ function Landing() {
     {
       id: 1,
       title: "Italian and Northern Renaissance",
-      description: "Description for Course 1",
+      description: "lectures-documentary films",
       imgSrc: "https://via.placeholder.com/150?text=Course+1",
     },
     {
       id: 2,
       title: "Hieronymus Bosch",
-      description: "Description for Course 2",
+      description: "lectures-documentary films",
       imgSrc: "https://via.placeholder.com/150?text=Course+2",
     },
     {
       id: 3,
       title: "Pieter Bruegel the Elder",
-      description: "Description for Course 3",
+      description: "lectures-documentary films",
       imgSrc: "https://via.placeholder.com/150?text=Course+3",
     },
     {
       id: 4,
       title: "Dante Alighieri. The Path to Happiness",
-      description: "Description for Course 4",
+      description: "lecture-documentary film",
       imgSrc: "https://via.placeholder.com/150?text=Course+4",
     },
     {
       id: 5,
       title: "Who killed Romeo and Juliet?",
-      description: "Description for Course 5",
+      description: "online course",
       imgSrc: "https://via.placeholder.com/150?text=Course+5",
     },
     {
       id: 6,
       title: "Michelangelo. The Medici Chapel",
-      description: "Description for Course 6",
+      description: "lecture-documentary film",
       imgSrc: "https://via.placeholder.com/150?text=Course+6",
     },
   ];
@@ -75,7 +76,7 @@ function Landing() {
   return (
     <div className="landing-container">
       <div className="header">
-        <h1 className="text-center">Hello, {userEmail}</h1>
+        <h1 className="text-center">Hello, {userName}</h1>
         <Button variant="danger" onClick={handleLogout}>
           Logout
         </Button>
