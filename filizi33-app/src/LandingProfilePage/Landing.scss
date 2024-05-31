@@ -4,10 +4,26 @@
 }
 
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  position: relative;
   margin-bottom: 20px;
+}
+
+.logout-button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 10px;
+}
+
+.profile-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-image-container {
+  position: relative;
+  display: inline-block;
 }
 
 .profile-image {
@@ -15,6 +31,20 @@
   height: 150px;
   border-radius: 50%;
   object-fit: cover;
+}
+
+.upload-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.user-greeting {
+  margin-left: 20px;
 }
 
 .course-list {

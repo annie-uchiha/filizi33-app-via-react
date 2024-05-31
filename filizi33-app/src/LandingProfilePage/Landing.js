@@ -4,6 +4,7 @@ import { useAuth } from "../AuthContext";
 import { users } from "../users";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
+import { FaUpload } from "react-icons/fa"; // Importing an upload icon
 import "./Landing.scss";
 
 function Landing() {
@@ -76,26 +77,30 @@ function Landing() {
   return (
     <div className="landing-container">
       <div className="header">
-        <h1 className="text-center">Hello, {userName}</h1>
-        <Button variant="danger" onClick={handleLogout}>
-          Logout
-        </Button>
-      </div>
-      <div className="image-upload-container">
-        <img
-          className="profile-image"
-          src={imageUrl || "https://via.placeholder.com/150"}
-          alt="Profile"
-        />
-        <input
-          type="file"
-          onChange={handleImageUpload}
-          style={{ display: "none" }}
-          id="file-upload"
-        />
-        <label htmlFor="file-upload" className="btn btn-primary">
-          Upload Photo
-        </label>
+        <div className="logout-button">
+          <Button variant="danger" onClick={handleLogout}>
+            Logout
+          </Button>
+        </div>
+        <div className="profile-info">
+          <div className="profile-image-container">
+            <img
+              className="profile-image"
+              src={imageUrl || "https://via.placeholder.com/150"}
+              alt="Profile"
+            />
+            <label htmlFor="file-upload" className="upload-icon">
+              <FaUpload />
+            </label>
+            <input
+              type="file"
+              onChange={handleImageUpload}
+              style={{ display: "none" }}
+              id="file-upload"
+            />
+          </div>
+          <h1 className="user-greeting">Hello, {userName}</h1>
+        </div>
       </div>
       <div>
         <h2>Your Courses</h2>
