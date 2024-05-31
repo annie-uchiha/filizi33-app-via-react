@@ -4,7 +4,13 @@ import { useAuth } from "../AuthContext";
 import { users } from "../users";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
-import { FaUpload } from "react-icons/fa"; // Importing an upload icon
+import { FaUpload } from "react-icons/fa";
+import italianNorthernImage from "./italian-and-northern.png";
+import boschImage from "./bosch-course.png";
+import danteLecture from "./dante-lecture.jpg";
+import mediciTomb from "./medici-tomb-lecture.png";
+import romeoAndJuliet from "./who-killed-rome-and-juliet.png";
+import bruegelImage from "./bruegel-course.png";
 import "./Landing.scss";
 
 function Landing() {
@@ -36,37 +42,37 @@ function Landing() {
       id: 1,
       title: "Italian and Northern Renaissance",
       description: "lectures-documentary films",
-      imgSrc: "https://via.placeholder.com/150?text=Course+1",
+      imgSrc: italianNorthernImage,
     },
     {
       id: 2,
       title: "Hieronymus Bosch",
       description: "lectures-documentary films",
-      imgSrc: "https://via.placeholder.com/150?text=Course+2",
+      imgSrc: boschImage,
     },
     {
       id: 3,
       title: "Pieter Bruegel the Elder",
       description: "lectures-documentary films",
-      imgSrc: "https://via.placeholder.com/150?text=Course+3",
+      imgSrc: bruegelImage,
     },
     {
       id: 4,
       title: "Dante Alighieri. The Path to Happiness",
       description: "lecture-documentary film",
-      imgSrc: "https://via.placeholder.com/150?text=Course+4",
+      imgSrc: danteLecture,
     },
     {
       id: 5,
       title: "Who killed Romeo and Juliet?",
       description: "online course",
-      imgSrc: "https://via.placeholder.com/150?text=Course+5",
+      imgSrc: romeoAndJuliet,
     },
     {
       id: 6,
       title: "Michelangelo. The Medici Chapel",
       description: "lecture-documentary film",
-      imgSrc: "https://via.placeholder.com/150?text=Course+6",
+      imgSrc: mediciTomb,
     },
   ];
 
@@ -109,7 +115,7 @@ function Landing() {
             const course = courses.find((c) => c.id === courseId);
             return (
               <Card key={course.id} style={{ width: "18rem", margin: "10px" }}>
-                <Card.Img variant="top" src={course.imgSrc} />
+                <Card.Img variant="top" style={{height: "17rem"}} src={course.imgSrc} />
                 <Card.Body>
                   <Card.Title>{course.title}</Card.Title>
                   <Card.Text>{course.description}</Card.Text>
